@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        nav {
+            margin-top: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+        ul {
+            list-style-position: inside; 
+        }
+        li {padding-left: 10px;
+        }
+        .about, .projects, .contact {
+            margin-bottom: 2rem;
+        }
+        .projects .project {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+        .projects .project img {
+            max-width: 250px;
+            border-radius: 5px;
+        }
+        .projects .project div {
+            flex-grow: 1;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: #fff;
+        }
+        footer a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm Ilakkiya Jothi V P, a passionate Engineering Student specializing in Information Technology. I enjoy building creative and impactful solutions through code and design.</p>
+    </section>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="image/fake.png" alt="Project 1">
+            <div>
+                <h3>Identifying Fake Products Using Barcode - Based on Blockchain Technology</h3>
+                <p>This project utilizes blockchain's immutable ledger and barcode scanning to combat counterfeit goods. 
+                    By integrating blockchain, it ensures product authenticity and secure transaction records. 
+                    The barcode is scanned, cross-referenced with a blockchain ledger, and verified for legitimacy, offering consumers a transparent solution for product validation.</p>
+                <ul><b>Key Features</b>
+                    <li>Blockchain-based tamper-proof product records.</li>
+                    <li>Real-time product authenticity verification.</li>
+                    <li>Enhanced consumer trust and supply chain transparency.</li>
+                </ul>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="image/prediction.png" alt="Project 2">
+            <div>
+                <h3>Predictive Analysis Development for Industrial Equipment</h3>
+                <p>This project leverages machine learning to predict and prevent equipment failures in industrial settings. 
+                    Using real-time data from sensors and historical performance records, predictive algorithms analyze patterns and forecast maintenance needs. 
+                    This minimizes downtime, reduces costs, and enhances operational efficiency.</p>
+                <ul><b>Key Features</b>
+                    <li>AI-driven anomaly detection and diagnostics.</li>
+                    <li>Predictive maintenance scheduling for industrial machinery.</li>
+                    <li>Data visualization tools for monitoring equipment performance.</li>
+                </ul>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me through the following channels:</p>
+        <ul>
+            <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+            <li>LinkedIn: <a href="#">Your LinkedIn</a></li>
+            <li>GitHub: <a href="#">Your GitHub</a></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Ilakkiya Jothi V P. Built with <a href="#">HTML, CSS, and JavaScript</a>.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const section = document.querySelector(e.target.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
